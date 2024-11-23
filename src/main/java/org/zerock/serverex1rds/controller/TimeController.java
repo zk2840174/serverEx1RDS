@@ -19,7 +19,7 @@ public class TimeController {
 
     private final TimeService timeService;
 
-    @GetMapping("")
+    @GetMapping("/now")
     public ResponseEntity<Map<String,String>> healthCheck() {
 
         return ResponseEntity.ok().body(Map.of("time", timeService.getTime()));
